@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-OrderMangementEventPublisher.Worker-4aa31beb-9d33-466e-b9fe-b7ac03763062</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.Messaging.Masstransit\Framework.Messaging.Masstransit.csproj" />
+    <ProjectReference Include="..\Framework.OutBoxPublisher\Framework.OutBoxPublisher.csproj" />
+    <ProjectReference Include="..\OrderManagement.Domain.Contract\OrderManagement.Domain.Contract.csproj" />
+  </ItemGroup>
+</Project>
